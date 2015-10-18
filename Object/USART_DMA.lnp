@@ -1,0 +1,14 @@
+--cpu Cortex-M4.fp
+".\object\main.o"
+".\object\startup_stm32f40xx.o"
+".\object\stm32f4xx_it.o"
+".\object\misc.o"
+".\object\stm32f4xx_dma.o"
+".\object\stm32f4xx_gpio.o"
+".\object\stm32f4xx_rcc.o"
+".\object\stm32f4xx_usart.o"
+".\object\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter ".\Object\USART_DMA.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\List\USART_DMA.map" -o .\Object\USART_DMA.axf
